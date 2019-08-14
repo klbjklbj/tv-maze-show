@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IShowInfo } from '../ishow-info';
 
 @Component({
   selector: 'app-my-tvmazeshow',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyTvmazeshowComponent implements OnInit {
 
-  constructor() { }
+  show: IShowInfo
+  constructor() { 
+    this.show={
+      name: 'SpongeBob Squarepants',
+      genre: 'kids',
+      country: 'USA',
+      summary: 'He lives in a pineapple under the sea.',
+      image: '',
+    }
+  }
 
   ngOnInit() {
   }
