@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Url } from 'url';
+import { environment } from 'src/environments/environment';
+
 
 
 interface Ishowinfodata {
@@ -28,7 +29,7 @@ export class MytvshowService {
 
   getmytvshow(show:string,country: string){
     this.httpClient.get<Ishowinfodata>(
-      `${environment.baseUrl}http://api.tvmaze.com/search/shows?q=${city},${country}&appId=${environment.appId}`
+      `${environment.baseUrl}api.tvmaze.com/search/shows?q=${show},${country}&appId=${environment.appId}`
     )
   }
 }
