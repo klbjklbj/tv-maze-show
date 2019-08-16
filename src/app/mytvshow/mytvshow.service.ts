@@ -15,9 +15,7 @@ country:{
 image: {
   medium: string
 },
-summary:{
-htmlelement:string
-}
+summary:string
 }
 
 @Injectable({
