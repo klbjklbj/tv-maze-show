@@ -8,7 +8,7 @@ import { MytvshowService } from "../mytvshow/mytvshow.service";
   styleUrls: ["./my-tvmazeshow.component.css"]
 })
 export class MyTvmazeshowComponent implements OnInit {
-  show: IShowInfo;
+  show:IShowInfo
   //constructor() fires first - allocates memory
   constructor(private myTvShowService: MytvshowService) {}
 
