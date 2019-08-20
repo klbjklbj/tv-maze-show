@@ -23,15 +23,16 @@ interface Ishowinfodata {
   providedIn: "root"
 })
 export class MytvshowService {
+  //Angular's HttpClient gives back observable data
   constructor(private httpClient: HttpClient) {}
 
+  //map() takes observable data and passes it to transform function
   getmytvshow(show: string) {
     return this.httpClient.get<Ishowinfodata>(
-      `${environment.baseUrl}api.tvmaze.com/search/shows?q=${show}&appId=${
-        environment.appId}`
+      `${environment.baseUrl}api.tvmaze.com/search/shows?q=${show}`
     ).pipe(
       map(data => this.transformToIShowInfo(data))
-    )
+    );
   }
 
   //Data Transformation--input is Ishowinfodata, output is IShowInfo

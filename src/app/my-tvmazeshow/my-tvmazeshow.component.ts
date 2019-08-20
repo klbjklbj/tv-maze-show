@@ -10,14 +10,16 @@ import { MytvshowService } from '../mytvshow/mytvshow.service';
 export class MyTvmazeshowComponent implements OnInit {
 
   show: IShowInfo
+  //constructor() fires first - allocates memory
   constructor(private myTvShowService: MytvshowService) { 
  
   }
 
-  //fires next after constructor()
+  //ngOnInit() fires next after constructor()
   //initializes memory with data
+  //subscribe() listens for changes
   ngOnInit() {
-    this.myTvShowService.getmytvshow('SpongeBob').subscribe(data=>this.show=data);
+    this.myTvShowService.getmytvshow('SpongeBob').subscribe(data => this.show = data);
   }
 
 }
