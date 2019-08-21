@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyTvmazeshowComponent } from './my-tvmazeshow/my-tvmazeshow.component';
 import { MytvshowService } from './mytvshow/mytvshow.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule,MatToolbarModule } from '@angular/material';
 
 
 @NgModule({
@@ -15,7 +17,14 @@ import { MytvshowService } from './mytvshow/mytvshow.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatIconModule,
+    MatInputModule,
+    MatToolbarModule
   ],
   providers: [MytvshowService],
   bootstrap: [AppComponent]
