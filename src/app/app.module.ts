@@ -7,12 +7,15 @@ import { MyTvmazeshowComponent } from './my-tvmazeshow/my-tvmazeshow.component';
 import { MytvshowService } from './mytvshow/mytvshow.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule,MatToolbarModule } from '@angular/material';
+import { ShowSearchComponent } from './show-search/show-search.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyTvmazeshowComponent
+    MyTvmazeshowComponent,
+    ShowSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,9 @@ import { MatCardModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatI
     MatCardModule,
     MatIconModule,
     MatInputModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [MytvshowService],
   bootstrap: [AppComponent]

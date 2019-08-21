@@ -1,12 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <mat-toolbar color ="primary">
+  <mat-toolbar color="primary">
     <span class="title-center">Welcome to {{ title }}!</span>
   </mat-toolbar>
-<div>
-    Name, Genre,Country,Summary
-</div>
-<mat-card>
-<app-my-tvmazeshow>My show</app-my-tvmazeshow>
-</mat-card>
+  <div>Your TV Show Info Right Now!</div>
+  <div>
+    <app-show-search></app-show-search>
+  </div>
+  <div>
+    <mat-card>
+      <h2>My Show</h2>
+      <app-my-tvmazeshow></app-my-tvmazeshow>
+    </mat-card>
+  </div>
 </div>

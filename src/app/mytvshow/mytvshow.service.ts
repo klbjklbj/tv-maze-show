@@ -26,9 +26,9 @@ export class MytvshowService {
   //Angular's HttpClient gives back observable data
   constructor(private httpClient: HttpClient) { }
   //map() takes observable data and passes it to transform function
-  getmytvshow(show: string) {
+  getmytvshow(search: string) {
     return this.httpClient.get<Ishowinfodata>(
-      `${environment.baseUrl}api.tvmaze.com/search/shows?q=${show}`
+      `${environment.baseUrl}api.tvmaze.com/search/shows?q=${search}`
     ).pipe(
       map(data => this.transformToIShowInfo(data))
     );
