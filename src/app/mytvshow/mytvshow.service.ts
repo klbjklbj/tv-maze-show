@@ -39,7 +39,7 @@ export class MytvshowService {
       name: data[0].show.name,
       genre: data[0].show.genres[0],
       country: data[0].show.network.country.name,
-      summary: data[0].show.summary,
+      summary: data[0].show.summary.replace(/<[^>]+>/g, ''),
       image: data[0].show.image.medium
     }
   }
