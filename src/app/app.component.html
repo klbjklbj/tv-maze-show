@@ -5,7 +5,9 @@
   </mat-toolbar>
   <div>Your TV Show Info Right Now!</div>
   <div>
-    <app-show-search></app-show-search>
+    <!-- When user enters text in textbox / event is emitted, fire doSearch function  -->
+    <!-- Whatever searchEvent gives back is put in $event variable -->
+    <app-show-search (searchEvent)="doSearch($event)"></app-show-search>
   </div>
     <mat-card class="addspace">
       <h2>My Show</h2>
