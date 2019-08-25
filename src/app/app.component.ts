@@ -15,7 +15,7 @@ export class AppComponent {
   constructor(private mytvshowService: MytvshowService){}
 
   doSearch(searchValue) {
-    const userInput = searchValue.trim();
+    const userInput = searchValue;
     this.mytvshowService
       .getmytvshow(userInput)
       .subscribe(data => this.showInfo=data);
