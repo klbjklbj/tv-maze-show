@@ -1,6 +1,5 @@
 import { Component, Output, OnInit, EventEmitter } from "@angular/core";
 import { FormControl, Validators } from "@angular/forms";
-import { MytvshowService } from "../mytvshow/mytvshow.service";
 import {debounceTime} from 'rxjs/operators'
 
 @Component({
@@ -14,7 +13,7 @@ export class ShowSearchComponent implements OnInit {
   @Output() searchEvent=new EventEmitter<string>();
 
   search = new FormControl("", [Validators.minLength(3)]);
-  constructor(private mytvshowService: MytvshowService) {}
+  constructor() {}
 
   ngOnInit() {
     //listen for textbox changes
@@ -22,10 +21,7 @@ export class ShowSearchComponent implements OnInit {
       if (!this.search.invalid) {
 
         this.searchEvent.emit(searchValue);
-        // const userInput = searchValue.trim();
-        // this.mytvshowService
-        //   .getmytvshow(userInput)
-        //   .subscribe(data => console.log(data));
+
       }
     });
   }
