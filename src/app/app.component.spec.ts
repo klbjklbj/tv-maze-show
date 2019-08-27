@@ -1,16 +1,37 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { MatCardModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, MatToolbarModule } from '@angular/material';
+import { ShowSearchComponent } from './show-search/show-search.component';
+import { MyTvmazeshowComponent } from './my-tvmazeshow/my-tvmazeshow.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MytvshowService } from './mytvshow/mytvshow.service';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import { MyTvShowServiceFake } from './mytvshow/mytvshow.service.fake';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        BrowserAnimationsModule,
+        HttpClientTestingModule,
+        RouterTestingModule, 
+        MatButtonModule,
+        MatFormFieldModule,
+        MatCardModule,
+        MatIconModule,
+        MatInputModule,
+        MatToolbarModule,
+        FormsModule,
+        ReactiveFormsModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        ShowSearchComponent,
+        MyTvmazeshowComponent
       ],
+      providers: [{ provide: MytvshowService, useClass: MyTvShowServiceFake}],
     }).compileComponents();
   }));
 

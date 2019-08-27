@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShowSearchComponent } from './show-search.component';
+import { MatCardModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, MatToolbarModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ShowSearchComponent', () => {
   let component: ShowSearchComponent;
@@ -8,7 +11,18 @@ describe('ShowSearchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShowSearchComponent ]
+      declarations: [ShowSearchComponent], 
+      imports: [
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatCardModule,
+        MatIconModule,
+        MatInputModule,
+        MatToolbarModule,
+        FormsModule,
+        ReactiveFormsModule
+      ]
     })
     .compileComponents();
   }));

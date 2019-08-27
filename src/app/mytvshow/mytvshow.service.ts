@@ -3,6 +3,13 @@ import { HttpClient } from "@angular/common/http";
 import { environment } from "src/environments/environment";
 import { IShowInfo } from '../ishow-info';
 import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+
+
+export interface IMyTvShowService{
+  getmytvshow(search: string) : Observable<IShowInfo>
+}
+
 // words here match words in TVMaze API
 interface Ishowinfodata {
   
@@ -22,7 +29,7 @@ interface Ishowinfodata {
 @Injectable({
   providedIn: "root"
 })
-export class MytvshowService {
+export class MytvshowService implements IMyTvShowService {
   //Angular's HttpClient gives back observable data
   constructor(private httpClient: HttpClient) { }
   //map() takes observable data and passes it to transform function
